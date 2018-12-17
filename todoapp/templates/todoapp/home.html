@@ -1,0 +1,18 @@
+{% extends 'todoapp/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="col-sm-12 bg-image">
+	<img src="/static/img/todo2.jpg" style="visibility: hidden; width:100%;" />
+</div>
+<div class="col-sm-12 my-4">
+	<ul class="list-group txt-dec">
+		<li class="list-group-item active text-center"><h4>Create Your To Do List</h4></li>
+		<li class="list-group-item"><a href="{% url 'register' %}">Sign Up</a></li>
+		<li class="list-group-item"><a href="{% url 'login' %}">Login</a></li>
+		<li class="list-group-item"><a href="{% url 'todo' %}">Create Your List</a></li>
+		<li class="list-group-item text-primary">Go For it!</li>
+	</ul>
+</div>
+{% endblock %}

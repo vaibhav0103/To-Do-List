@@ -1,0 +1,12 @@
+{% extends 'todoapp/base.html' %}
+
+{% block content %}
+<div class="col-sm-10">
+	<h1>Register</h1>
+	{% include 'accounts/form.html' with form=form %}
+	<div class="something my-4">
+		Already a member ? <a href="{% url 'login' %}"> Login</a>
+	</div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'todoapp/base.html' %}
+{% if user.is_authenticated %}
+{% block content %}
+<div class="col-sm-8">
+  <h2>Hello {{ user.full_name }}, </h2>
+  <div class="list-section">
+    {% include 'todoapp/todo_list.html' %}
+  </div>  
+</div>
+<div class="col-sm-4 tip-image">
+  <img src="/static/img/todo-tip.png" style="visibility: hidden; width:100%;" />
+</div>
+{% endblock %}
+{% endif %}

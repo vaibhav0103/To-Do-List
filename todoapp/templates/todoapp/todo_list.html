@@ -1,0 +1,26 @@
+{% if count_items %}
+<h5 class="text-success">Here is your To Do List ({{ count_items }} Items)</h5>
+{% else %}
+<h5 class="text-danger">Your To Do List Is Empty.</h5>
+{% endif %}
+<ul class="list-group">
+	{% for todo_item in all_items %}
+	<li class="list-group-item">{{ todo_item.content }}
+		<form action="{% url 'deletetodo' todo_item.id %}" style="display: inline;" method="POST">
+			{% csrf_token %}
+			<button type="submit" id="deltodo" title="Delete" style="background: none; border: none; float:right;"><span class="fas fa-trash fa-lg"></span></button>
+		</form>
+	</li>
+	{% endfor %}
+</ul>
+{% if not count_items >= 10 %}
+    <form action="{% url 'addtodo' %}" method="POST" class="text-center my-4">
+      {% csrf_token %}
+      <input type="text" name="content" />
+      <button  type="submit" id="addtodo" class="btn btn-primary">Add Item</button>
+    </form>
+{% else %}
+	<div class="text-center my-4">
+		<h5 class="text-danger">Notice: Delete Some Items To Add More</h5>
+	</div>
+{% endif %}

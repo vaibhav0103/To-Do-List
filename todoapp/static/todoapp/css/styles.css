@@ -1,0 +1,50 @@
+
+body{
+	min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 250px;
+}
+
+.bg-image {
+  background-image: url("/static/img/todo2.jpg");
+  background-position: center;
+  /*height: auto;*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*border: 1px solid red;*/
+}
+
+.tip-image {
+  background-image: url("/static/img/todo-tip.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.navbar{
+  background-color: #271717;
+}
+
+button .fa-trash{
+  color: blue;
+}
+
+button .fa-trash:hover{
+  color: red;
+}
+
+.txt-dec a:hover{
+  text-decoration: none;
+}
+
+.footer {
+  padding: 4rem 0;
+  background-color: #271717;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /*width: 100%;*/
+}
